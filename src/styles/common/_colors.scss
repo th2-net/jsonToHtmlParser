@@ -1,0 +1,195 @@
+$reportTitleTextColor: #7b7b7b;
+
+$failedTextColor: #971a1a;
+$failedTextColorLight: #ff6666;
+$failedBorderColor: #ffcb99;
+$failedHeaderColor: #ffcccc;
+$failedBorderColorSecondary: $failedHeaderColor;
+$failedBorderHoverColor: #ffa64c;
+$failedDelimiterHoverColor: #ff6666;
+$failedBackgroundColor: #ffdbdb;
+$failedHeaderBorderColor: $failedTextColor;
+$failedHeaderSecondaryBackground: $failedHeaderColor;
+$failedSecondaryTextColor: #e05252;
+$failedIconColor: #ff999b;
+$failedIconColorLight: #ffe5e6;
+$failedIconColorActive: #bc271a;
+
+$passedTextColor: #04541f;
+$passedTextColorLight: #4db26f;
+$passedBorderColor: $failedBorderColor;
+$passedHeaderColor: #dbf0df;
+$passedBorderColorSecondary: $passedHeaderColor;
+$passedBorderHoverColor: $failedBorderHoverColor;
+$passedDelimiterHoverColor: #7db3e8;
+$passedBackgroundColor: $passedBorderColorSecondary;
+$passedHeaderSecondaryBackground: $passedBackgroundColor;
+$passedSecondaryTextColor: rgba(#1f991f, 0.5);
+$passedIconColor: #85e0a3;
+$passedIconColorLight: #d6f5e0;
+$passedIconColorActive: #00802a;
+
+$naTextColor: $reportTitleTextColor;
+
+$primaryTextColor: #4d4d4d;
+$primaryTextColorLight: #5e5e5e;
+$secondaryTextColor: #808080;
+$secondaryLightTextColor: #999999;
+$alternativeTextColor: #666666;
+$activeTextColor: #333333;
+
+$defaultCardBorderColor: #666666;
+$defaultCardBackground: #e0e0e0;
+$defaultSelectedCardBackground: #e0e0e033;
+
+$buttonDisabledBackground: $defaultCardBackground;
+
+$tableHeaderBackground: #148fcc;
+$tableHeaderBackgroundSecondary: #73b6e6;
+$tableCellBorderColor: #cccccc;
+$tableSubEntriesCounterBackgroundColor: #a8ccf0;
+$tableRowFailedBackgroundColor: #ffb3b3;
+$tableRowPassedBackgroundColor: #cee8d3;
+$tableStatusFailedColor: #e23636;
+$tableStatusPassedColor: #3f9e50;
+$tableStatusNAColor: #cccccc;
+$tableTitleColor: #262626;
+$tableCounterBackgroundColor: #e6e6e6;
+
+$tableBodyBackground: #fff;
+$tableBodyBackgroundHighlighted: $tableHeaderBackground;
+
+$messageCardHoverBackground: #f3fafc;
+$attachedMessageColor: #1919e6;
+$highlightedMessageCardBackground: rgba($attachedMessageColor, 0.1);
+$attachedMessageCardHoverBackground: rgba($attachedMessageColor, 0.1);
+$exportedMessageCardBorderColor: rgba($attachedMessageColor, 0.3);
+$exportedMessageCardBackground: rgba($attachedMessageColor, 0.2);
+$exportedMessageCardHoverBackground: rgba($attachedMessageColor, 0.1);
+$attachedMessageCardBorderColor: rgba($attachedMessageColor, 0.5);
+$attachedMessageCardHoverBorderColor: $attachedMessageColor;
+$attachedMessageCardIconColor: $attachedMessageColor;
+$messageCardKeyColor: #5cc2d6;
+$messageCardValueColor: #087a91;
+$messageCardRawHoverBackground: rgba(102, 102, 102, 0.15);
+
+$rejectedMessageLabelBackground: #ffe699;
+$adminMessageLabelBackground: #7acccc;
+
+$filterPrimaryColor: #00bbcc;
+$filterSecondaryColor: #ffdd99;
+$filterTextColor: #ffffff;
+$filterPathColor: #000000;
+
+$bubbleDefaultBackground: #ffffff;
+
+$filterButtonEnabled: #3d994d;
+$filterButtonDisabled: #79bf80;
+$filterButtonTextColor: white;
+
+$notificationBackground: #d9d9d9;
+
+$scrollbarThumbBackground: #c4c4c4;
+$scrollbarTrackBackground: #f2f2f2;
+
+$splitterColor: #cccccc;
+
+$spinnerOuterColor: $defaultCardBorderColor;
+$spinnerInnerColor: rgba(0, 0, 0, 0.2);
+
+$chipTextColor: #333333;
+
+$linkTextColor: #1763cf;
+$linkUnderlineColor: #a8c6f0;
+
+$clickableHoverBackground: rgba(102, 102, 102, 0.15);
+
+$hintBackgroundColor: white;
+$hintBorderColor: $failedBorderColor;
+$hintShadowColor: transparentize(black, 0.5);
+$hintTextColor: black;
+
+$nullValuetextColor: $naTextColor;
+
+$skeletonBackgroundColor: #e6e6e6;
+
+$errorMsgBackgroundColor: #e23636;
+
+$tabsBackgroundColor: #e6e6e6;
+
+$windowsLayoutBackgroundColor: #bdccdb;
+
+$windowsSplitterColor: #7db3e8;
+
+$filterPickerControlColor: #e6e6e6;
+$filterPickerControlFontColor: #4d4d4d;
+$filterPickerScrollItemColor: #666666;
+$filterPickerScrollItemActiveColor: #3fc7fa;
+$filterPickerScrollItemBlockedColor: #f3f3f3;
+$filterPickerScrollItemBlockedFontColor: #bcbcbc;
+$filterPickerScrollItemHoverColor: #ebfaff;
+
+$toastErrorBackground: $failedDelimiterHoverColor;
+$toastSuccessBackground: #4db26f;
+
+$attentionTextColor: white;
+$attentionBackgroundColor: #f07a36;
+
+$realtimeButtonColor: #e6e6e6;
+$realtimeButtonActiveColor: #a9e9b5;
+$realtimeButtonBorderColor: #999999;
+
+$graphBackgroundColor: #dee5ed;
+$graphButtonBackgroundColor: #d7e0ea;
+$graphTickColor: #3d668f;
+$graphTextColor: $graphTickColor;
+$graphAttachedEventPassedColor: #00802a;
+$graphAttachedEventFailedColor: #bc271a;
+$graphRangeSelectorBorder: #ff7733;
+$graphOverlayEventsColor: #3d668f;
+$graphOverlayPassedEventsColor: #00802a;
+$graphOverlayFailedEventsColor: #e60000;
+$graphOverlayMessagesColor: #1481b8;
+$graphOverlayConnectedMessagesColor: #ff6b00;
+$graphAttachedEventPassedColor: #00802a;
+$graphAttachedEventFailedColor: #bc271a;
+$graphOverlayPinnedMessagesColor: #a21ae5;
+$graphAttachedItemNameColor: #bc271a;
+$graphAttachedItemTimestampColor: #666666;
+
+$timestampInputBorderColor: #7a99b8;
+
+$eventCardIdColor: #595959;
+$eventTextColor: #f26c0d;
+$eventTextColorLight: #ffb266;
+
+$workspaceBackground: #eef2f6;
+$workspaceLinkGetterColor: #3d668f;
+$workspaceTabTextColor: $workspaceLinkGetterColor;
+$workspaceTabBackground: #cce6ff;
+$workspaceTabActiveBackground: #4d80b2;
+
+$expandIconBackgroundColor: rgba(0, 0, 0, 0.1);
+
+$controlButtonTextColor: #808080;
+$controlButtonTextColorHover: #595959;
+
+$messageListLoadButtonColor: #e5eaf0;
+$messageListLoadButtonTextColor: #3d668f;
+$messageListSearchInfoColor: #d8d8d8;;
+$messageListSearchInfoTextColor: #333333;
+
+$searchTextColor: white;
+$searchPanelColor: #adc2eb;
+$searchProgressBarColor: #9163db;
+$searchButtonColor: white;
+$searchNotFoundEventsColor: #fbd010;
+
+$bookmarkIconColor: #a65cd6;
+$bookmarkPanelHeaderColor: #cca3f5;
+$bookmarkPanelCheckboxColor: #e8daf8;
+$bookmarkPanelButtonTextColor: white;
+$bookmarkPanelButtonBackgroundColor: #cca3f5;
+$bookmarkLinkHoverColor: #040505;
+$eventsListLoadButtonColor: #e5eaf0;
+$eventsListLoadButtonTextColor: #bc271a;

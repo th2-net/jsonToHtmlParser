@@ -1,0 +1,183 @@
+
+@mixin status-card {
+	--status-primary-color: #{$primaryTextColor};
+	--status-primary-color-light: #{$primaryTextColorLight};
+	--status-secondary-color: #{$secondaryTextColor};
+	--status-primary-border-color: #{$defaultCardBorderColor};
+	--status-secondary-border-color: #{$defaultCardBackground};
+	--status-hover-border-color: #{$defaultCardBorderColor};
+	--status-primary-background-color: #{$defaultCardBorderColor};
+	--status-primary-delimeter-color: #{$defaultCardBackground};
+	--status-secondary-background-color: #{$defaultSelectedCardBackground};
+	--status-primary-header-background-color: #{$defaultCardBorderColor};
+	--status-secondary-header-background-color: #{$defaultSelectedCardBackground};
+	--status-icon-color: #{$secondaryTextColor};
+	--status-icon-color-light: #{$secondaryLightTextColor};
+	--status-icon-color-active: #{$primaryTextColor};
+
+	&.passed {
+		// we can't symply assign scss variable to css variable because sass doesn't know css varible type,
+		// so we use #{ ... } syntax to tell sass that we use variable as color
+		// https://github.com/sass/libsass/issues/2621
+		--status-primary-color: #{$passedTextColor};
+		--status-primary-color-light: #{$passedTextColorLight};
+		--status-secondary-color: #{$passedSecondaryTextColor};
+		--status-primary-border-color: #{$passedBorderColor};
+		--status-secondary-border-color: #{$passedBorderColorSecondary};
+		--status-hover-border-color: #{$passedBorderHoverColor};
+		--status-primary-delimeter-color: #{$passedDelimiterHoverColor};
+		--status-primary-background-color: #{$passedBorderColor};
+		--status-secondary-background-color: #{$passedBackgroundColor};
+		--status-primary-header-background-color: #{$passedHeaderColor};
+		--status-secondary-header-background-color: #{$passedHeaderSecondaryBackground};
+		--status-icon-color: #{$passedIconColor};
+		--status-icon-color-light: #{$passedIconColorLight};
+		--status-icon-color-active: #{$passedIconColorActive};
+	}
+
+	&.failed {
+		--status-primary-color: #{$failedTextColor};
+		--status-primary-color-light: #{$failedTextColorLight};
+		--status-secondary-color: #{$failedSecondaryTextColor};
+		--status-primary-border-color: #{$failedBorderColor};
+		--status-secondary-border-color: #{$failedBorderColorSecondary};
+		--status-hover-border-color: #{$failedBorderHoverColor};
+		--status-primary-delimeter-color: #{$failedDelimiterHoverColor};
+		--status-primary-background-color: #{$failedBorderColor};
+		--status-secondary-background-color: #{$failedBackgroundColor};
+		--status-primary-header-background-color: #{$failedHeaderColor};
+		--status-secondary-header-background-color: #{$failedHeaderSecondaryBackground};
+		--status-header-border-color: #{$failedHeaderBorderColor};
+		--status-icon-color: #{$failedIconColor};
+		--status-icon-color-light: #{$failedIconColorLight};
+		--status-icon-color-active: #{$failedIconColorActive};
+	}
+}
+
+@mixin default-table {
+	table {
+		border-collapse: collapse;
+		border-style: hidden;
+		table-layout: fixed;
+		border-radius: 4px;
+		display: grid;
+		min-width: 100%;
+		grid-auto-rows: minmax(24px, auto);
+	}
+
+	th,
+	td {
+		font-size: 11px;
+		line-height: 16px;
+		padding-top: 0;
+		padding-bottom: 0;
+		box-sizing: border-box;
+		border-bottom: 1px solid $tableCellBorderColor;
+	}
+
+	thead,
+	tbody,
+	tr {
+		display: contents;
+	}
+
+	td {
+		word-break: break-all;
+		white-space: pre-wrap;
+		background-color: $tableBodyBackground;
+		border-right: 0;
+		border-left: 0;
+		display: flex;
+		align-items: center;
+
+		&.transparent {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+
+	th {
+		font-weight: bold;
+		line-height: 16px;
+		color: white;
+		background-color: $tableHeaderBackground;
+		padding: 4px;
+
+		&.transparent {
+			background-color: transparent;
+			border-color: transparent;
+		}
+
+		&:first-child {
+			border-radius: 4px 0 0 0;
+		}
+
+		&:last-child {
+			border-radius: 0 4px 0 0;
+		}
+	}
+
+	td,
+	th {
+		&:first-child {
+			padding-left: 16px;
+		}
+	}
+
+	tr {
+		&:hover td {
+
+			&.transparent {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@mixin event-status-icon($isParentHoverable: false) {
+	@if $isParentHoverable {
+		&:hover .event-status-icon {
+			border-color: var(--status-icon-color-active);
+			background-color: var(--status-icon-color-active);
+		}
+	}
+
+	& .event-status-icon {
+		flex-shrink: 0;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background-color: var(--status-icon-color-active);
+
+		&.selected {
+			border-color: var(--status-icon-color-active);
+			background-color: var(--status-icon-color-active);
+		}
+
+		&.active {
+			box-shadow: 0 0 0 2px white;
+			background-color: var(--status-icon-color-active);
+		}
+	}
+}
+
+@mixin icon($image, $height: 16px, $width: 16px) {
+	height: $height;
+	width: $width;
+
+	background: {
+		image: $image;
+		repeat: no-repeat;
+		size: 100%;
+		position: center;
+	}
+}
+
+@mixin unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
